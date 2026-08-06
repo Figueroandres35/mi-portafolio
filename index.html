@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rodolfo | Portafolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+background:linear-gradient(135deg,#111,#1f1f1f);
+}
+
+h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+p{
+font-size:20px;
+color:#ccc;
+}
+
+section{
+padding:80px 10%;
+}
+
+h2{
+font-size:35px;
+margin-bottom:30px;
+}
+
+.proyectos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e1e1e;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:#ff3b30;
+color:white;
+cursor:pointer;
+font-size:16px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#0b0b0b;
+color:#aaa;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Rodolfo</h1>
+
+<p>Diseñador Gráfico</p>
+
+</header>
+
+<section>
+
+<h2>Sobre mí</h2>
+
+<p>
+Soy diseñador gráfico apasionado por crear identidades visuales, piezas publicitarias y proyectos creativos que conectan con las personas.
+</p>
+
+</section>
+
+<section>
+
+<h2>Mis Proyectos</h2>
+
+<div class="proyectos">
+
+<div class="card">
+
+<h3>Proyecto 1</h3>
+
+<p>Descripción del proyecto.</p>
+
+<button>Ver Proyecto</button>
+
+</div>
+
+<div class="card">
+
+<h3>Proyecto 2</h3>
+
+<p>Descripción del proyecto.</p>
+
+<button>Ver Proyecto</button>
+
+</div>
+
+<div class="card">
+
+<h3>Proyecto 3</h3>
+
+<p>Descripción del proyecto.</p>
+
+<button>Ver Proyecto</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Rodolfo - Portafolio
+
+</footer>
+
+</body>
+
+</html>
