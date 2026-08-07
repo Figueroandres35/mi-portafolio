@@ -19,6 +19,8 @@ background:#111;
 color:white;
 }
 
+/* ---------- HERO ---------- */
+
 .hero{
 height:100vh;
 display:flex;
@@ -32,6 +34,14 @@ background:linear-gradient(135deg,#111,#1f1f1f);
 max-width:500px;
 }
 
+.hero-tag{
+color:#888;
+font-size:14px;
+letter-spacing:4px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
 .hero-text h1{
 font-size:60px;
 margin-bottom:10px;
@@ -42,28 +52,39 @@ font-size:22px;
 color:#ccc;
 }
 
-.hero-img{
+.hero-buttons{
 display:flex;
-justify-content:center;
-align-items:center;
+flex-direction:column;
+gap:18px;
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+width:240px;
+padding:15px;
+background:#ff3b30;
+color:white;
+text-decoration:none;
+font-weight:bold;
+text-align:center;
+border-radius:10px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e12d22;
+transform:translateX(8px);
 }
 
 .hero-img img{
-width:300px;
+width:340px;
 max-width:100%;
 border-radius:20px;
+box-shadow:0 0 30px rgba(0,0,0,.5);
 }
 
-h1{
-font-size:60px;
-margin-bottom:10px;
-}
-
-p{
-font-size:20px;
-color:#ccc;
-line-height:1.6;
-}
+/* ---------- SECCIONES ---------- */
 
 section{
 padding:80px 10%;
@@ -74,10 +95,19 @@ font-size:35px;
 margin-bottom:30px;
 }
 
+p{
+font-size:20px;
+color:#ccc;
+line-height:1.6;
+}
+
+/* ---------- GALERÍA ---------- */
+
 .proyectos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
+margin-top:40px;
 }
 
 .card{
@@ -85,33 +115,54 @@ background:#1e1e1e;
 padding:25px;
 border-radius:15px;
 transition:.3s;
+text-align:center;
 }
 
 .card:hover{
 transform:translateY(-8px);
 }
 
-button{
-margin-top:20px;
-padding:12px 25px;
-border:none;
-border-radius:8px;
-background:#ff3b30;
-color:white;
-cursor:pointer;
-font-size:16px;
-transition:.3s;
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
 }
 
-button:hover{
-background:#e12d22;
+.card h3{
+margin-bottom:10px;
 }
+
+/* ---------- FOOTER ---------- */
 
 footer{
 text-align:center;
 padding:40px;
 background:#0b0b0b;
 color:#aaa;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+justify-content:center;
+text-align:center;
+height:auto;
+padding:60px 8%;
+}
+
+.hero-buttons{
+align-items:center;
+}
+
+.hero-img{
+margin-top:40px;
+}
+
+.hero-img img{
+width:260px;
+}
+
 }
 
 </style>
@@ -123,9 +174,37 @@ color:#aaa;
 <header class="hero">
 
 <div class="hero-text">
+
+<div class="hero-tag">
+PORTAFOLIO
+</div>
+
 <h1>Rodolfo</h1>
 
 <p>Diseñador Gráfico</p>
+
+<div class="hero-buttons">
+
+<a class="btn"
+href="https://drive.google.com/drive/folders/16GemmA-bAoKPXc-ylK63IIncS7JT5vAr?usp=sharing"
+target="_blank">
+🎨 Ver Portafolio
+</a>
+
+<a class="btn"
+href="Hoja_de_Vida_Rodolfo_Figueroa.pdf"
+download>
+📄 Descargar CV
+</a>
+
+<a class="btn"
+href="https://wa.me/573206797249?text=Hola%20Rodolfo.%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20una%20oportunidad%20laboral."
+target="_blank">
+📱 Contacto
+</a>
+
+</div>
+
 </div>
 
 <div class="hero-img">
@@ -139,57 +218,30 @@ color:#aaa;
 <h2>Sobre mí</h2>
 
 <p>
-Soy diseñador gráfico apasionado por crear identidades visuales, piezas publicitarias y proyectos creativos.
+Soy diseñador gráfico apasionado por crear identidades visuales, piezas publicitarias y proyectos creativos. Me gusta desarrollar soluciones visuales que comuniquen ideas de forma clara, atractiva y profesional.
 </p>
 
 </section>
 
 <section>
 
-<h2>Recursos Profesionales</h2>
+<h2>Mis Proyectos</h2>
 
 <div class="proyectos">
 
 <div class="card">
-
-<h3>📄 Hoja de Vida</h3>
-
-<p>
-Conoce mi perfil profesional, experiencia, formación y habilidades.
-</p>
-
-<a href="Hoja_de_Vida_Rodolfo_Figueroa.pdf" download>
-    <button>Descargar CV</button>
-</a>
-
+<h3>🎨 Proyecto 1</h3>
+<p>Próximamente agregaré aquí uno de mis mejores diseños.</p>
 </div>
 
 <div class="card">
-
-<h3>🎨 Portafolio</h3>
-
-<p>
-Descubre mis proyectos de diseño gráfico.
-</p>
-
-<a href="https://drive.google.com/drive/folders/16GemmA-bAoKPXc-ylK63IIncS7JT5vAr?usp=sharing" target="_blank">
-    <button>Ver Portafolio</button>
-</a>
-
+<h3>🖌 Proyecto 2</h3>
+<p>Aquí mostraré otro trabajo de branding o diseño gráfico.</p>
 </div>
 
 <div class="card">
-
-<h3>📱 Contacto</h3>
-
-<p>
-¿Te interesa trabajar conmigo? Estaré encantado de conversar contigo.
-</p>
-
-<a href="https://wa.me/573206797249?text=Hola%20Rodolfo.%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20una%20oportunidad%20laboral." target="_blank">
-    <button>Escribirme</button>
-</a>
-
+<h3>✨ Proyecto 3</h3>
+<p>Espacio reservado para futuros proyectos.</p>
 </div>
 
 </div>
@@ -203,8 +255,4 @@ Descubre mis proyectos de diseño gráfico.
 </footer>
 
 </body>
-</html>
-
-</body>
-
 </html>
