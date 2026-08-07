@@ -19,14 +19,39 @@ background:#111;
 color:white;
 }
 
-header{
+.hero{
 height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 10%;
+background:linear-gradient(135deg,#111,#1f1f1f);
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+.hero-text p{
+font-size:22px;
+color:#ccc;
+}
+
+.hero-img{
 display:flex;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-text-align:center;
-background:linear-gradient(135deg,#111,#1f1f1f);
+}
+
+.hero-img img{
+width:380px;
+max-width:100%;
+border-radius:20px;
 }
 
 h1{
