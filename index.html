@@ -1,167 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rodolfo | Portafolio</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-background:#111;
-color:white;
+    background:#111;
+    color:white;
 }
 
-/* ---------- HERO ---------- */
+/* =========================
+   PORTADA
+========================= */
 
 .hero{
-height:100vh;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 8%;
-background:linear-gradient(135deg,#111,#1f1f1f);
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 8%;
+    background:linear-gradient(135deg,#111,#1f1f1f);
+    gap:50px;
 }
 
 .hero-text{
-max-width:500px;
-}
-
-.hero-tag{
-color:#888;
-font-size:14px;
-letter-spacing:4px;
-font-weight:bold;
-margin-bottom:20px;
+    max-width:500px;
 }
 
 .hero-text h1{
-font-size:60px;
-margin-bottom:10px;
+    font-size:60px;
+    margin-bottom:10px;
 }
 
 .hero-text p{
-font-size:22px;
-color:#ccc;
+    font-size:22px;
+    color:#ccc;
 }
+
+/* BOTONES */
 
 .hero-buttons{
-display:flex;
-flex-direction:column;
-gap:18px;
-margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:35px;
 }
 
-.btn{
-display:inline-block;
-width:240px;
-padding:15px;
-background:#ff3b30;
-color:white;
-text-decoration:none;
-font-weight:bold;
-text-align:center;
-border-radius:10px;
-transition:.3s;
+.hero-buttons a{
+    text-decoration:none;
 }
 
-.btn:hover{
-background:#e12d22;
-transform:translateX(8px);
+.hero-buttons button{
+    width:220px;
+}
+
+/* IMAGEN */
+
+.hero-img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .hero-img img{
-width:340px;
-max-width:100%;
-border-radius:20px;
-box-shadow:0 0 30px rgba(0,0,0,.5);
+    width:300px;
+    max-width:100%;
+    border-radius:20px;
 }
 
-/* ---------- SECCIONES ---------- */
+/* =========================
+   GENERAL
+========================= */
 
 section{
-padding:80px 10%;
+    padding:80px 10%;
 }
 
 h2{
-font-size:35px;
-margin-bottom:30px;
+    font-size:35px;
+    margin-bottom:30px;
 }
 
 p{
-font-size:20px;
-color:#ccc;
-line-height:1.6;
+    font-size:20px;
+    color:#ccc;
+    line-height:1.6;
 }
 
-/* ---------- GALERÍA ---------- */
+/* =========================
+   SOBRE MÍ
+========================= */
 
-.proyectos{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
+.sobre-mi{
+    max-width:900px;
 }
 
-.card{
-background:#1e1e1e;
-padding:25px;
-border-radius:15px;
-transition:.3s;
-text-align:center;
+/* =========================
+   TRABAJOS
+========================= */
+
+.trabajos{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
 }
 
-.card:hover{
-transform:translateY(-8px);
+.trabajo{
+    background:#1e1e1e;
+    border-radius:15px;
+    overflow:hidden;
+    transition:transform .3s, box-shadow .3s;
 }
 
-.card img{
-width:100%;
-border-radius:10px;
-margin-bottom:15px;
+.trabajo:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
-.card h3{
-margin-bottom:10px;
+.trabajo img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    display:block;
 }
 
-/* ---------- FOOTER ---------- */
+.trabajo-info{
+    padding:25px;
+}
+
+.trabajo-info h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.trabajo-info p{
+    font-size:16px;
+    color:#bbb;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+button{
+    margin-top:10px;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#ff3b30;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#e12d22;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-text-align:center;
-padding:40px;
-background:#0b0b0b;
-color:#aaa;
+    text-align:center;
+    padding:40px;
+    background:#0b0b0b;
+    color:#aaa;
 }
 
-@media(max-width:900px){
+/* =========================
+   CELULARES
+========================= */
 
-.hero{
-flex-direction:column;
-justify-content:center;
-text-align:center;
-height:auto;
-padding:60px 8%;
-}
+@media (max-width:800px){
 
-.hero-buttons{
-align-items:center;
-}
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:60px 6%;
+    }
 
-.hero-img{
-margin-top:40px;
-}
+    .hero-text h1{
+        font-size:48px;
+    }
 
-.hero-img img{
-width:260px;
-}
+    .hero-buttons{
+        align-items:center;
+    }
+
+    .hero-img img{
+        width:280px;
+    }
+
+    .trabajos{
+        grid-template-columns:1fr;
+    }
 
 }
 
@@ -169,90 +216,201 @@ width:260px;
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     PORTADA
+========================= -->
 
 <header class="hero">
 
-<div class="hero-text">
+    <div class="hero-text">
 
-<div class="hero-tag">
-PORTAFOLIO
-</div>
+        <h1>Rodolfo</h1>
 
-<h1>Rodolfo</h1>
+        <p>Diseñador Gráfico</p>
 
-<p>Diseñador Gráfico</p>
 
-<div class="hero-buttons">
+        <div class="hero-buttons">
 
-<a class="btn"
-href="https://drive.google.com/drive/folders/16GemmA-bAoKPXc-ylK63IIncS7JT5vAr?usp=sharing"
-target="_blank">
-🎨 Ver Portafolio
-</a>
+            <!-- PORTAFOLIO -->
 
-<a class="btn"
-href="Hoja_de_Vida_Rodolfo_Figueroa.pdf"
-download>
-📄 Descargar CV
-</a>
+            <a href="https://drive.google.com/drive/folders/16GemmA-bAoKPXc-ylK63IIncS7JT5vAr?usp=sharing"
+               target="_blank">
 
-<a class="btn"
-href="https://wa.me/573206797249?text=Hola%20Rodolfo.%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20una%20oportunidad%20laboral."
-target="_blank">
-📱 Contacto
-</a>
+                <button>🎨 Portafolio</button>
 
-</div>
+            </a>
 
-</div>
 
-<div class="hero-img">
-<img src="RAF.png" alt="Rodolfo">
-</div>
+            <!-- HOJA DE VIDA -->
+
+            <a href="Hoja_de_Vida_Rodolfo_Figueroa.pdf"
+               download>
+
+                <button>📄 Hoja de Vida</button>
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+
+            <a href="https://wa.me/573206797249?text=Hola%20Rodolfo.%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20una%20oportunidad%20laboral"
+               target="_blank">
+
+                <button>📱 Contacto</button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-img">
+
+        <img src="RAF.png" alt="Rodolfo">
+
+    </div>
 
 </header>
 
-<section>
 
-<h2>Sobre mí</h2>
-
-<p>
-Soy diseñador gráfico apasionado por crear identidades visuales, piezas publicitarias y proyectos creativos. Me gusta desarrollar soluciones visuales que comuniquen ideas de forma clara, atractiva y profesional.
-</p>
-
-</section>
+<!-- =========================
+     SOBRE MÍ
+========================= -->
 
 <section>
 
-<h2>Mis Proyectos</h2>
+    <div class="sobre-mi">
 
-<div class="proyectos">
+        <h2>Sobre mí</h2>
 
-<div class="card">
-<h3>🎨 Proyecto 1</h3>
-<p>Próximamente agregaré aquí uno de mis mejores diseños.</p>
-</div>
+        <p>
+            Soy diseñador gráfico apasionado por crear identidades
+            visuales, piezas publicitarias y proyectos creativos.
+        </p>
 
-<div class="card">
-<h3>🖌 Proyecto 2</h3>
-<p>Aquí mostraré otro trabajo de branding o diseño gráfico.</p>
-</div>
-
-<div class="card">
-<h3>✨ Proyecto 3</h3>
-<p>Espacio reservado para futuros proyectos.</p>
-</div>
-
-</div>
+    </div>
 
 </section>
+
+
+<!-- =========================
+     MIS TRABAJOS
+========================= -->
+
+<section>
+
+    <h2>🎨 Mis trabajos</h2>
+
+    <div class="trabajos">
+
+
+        <!-- AMÉRICA -->
+
+        <div class="trabajo">
+
+            <img src="America (22).png"
+                 alt="Diseño gráfico del América de Cali">
+
+            <div class="trabajo-info">
+
+                <h3>🔴 Diseño deportivo</h3>
+
+                <p>
+                    Edición gráfica inspirada en la identidad
+                    visual del América de Cali.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PANDEBONO -->
+
+        <div class="trabajo">
+
+            <img src="Cartel.png"
+                 alt="Cartel del Día Mundial del Pandebono">
+
+            <div class="trabajo-info">
+
+                <h3>🥯 Día Mundial del Pandebono</h3>
+
+                <p>
+                    Pieza publicitaria con enfoque cultural y
+                    gastronómico, combinando composición,
+                    fotografía y tipografía.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PICADA D' LUIS -->
+
+        <div class="trabajo">
+
+            <img src="Post de Picada Promocional.png"
+                 alt="Publicidad de Picada D' Luis">
+
+            <div class="trabajo-info">
+
+                <h3>🍽️ Picada D' Luis</h3>
+
+                <p>
+                    Diseño publicitario gastronómico con
+                    composición de producto, tipografía y
+                    elementos de marca.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PICADA VEGETARIANA -->
+
+        <div class="trabajo">
+
+            <img src="Post de picada vegetariana.png"
+                 alt="Publicidad de Picada Vegetariana">
+
+            <div class="trabajo-info">
+
+                <h3>🥗 Picada Vegetariana</h3>
+
+                <p>
+                    Diseño promocional gastronómico enfocado
+                    en composición visual, producto y tipografía.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-© 2026 Rodolfo - Portafolio
+    © 2026 Rodolfo - Portafolio
 
 </footer>
 
+
 </body>
+
 </html>
